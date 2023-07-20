@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blurred Background with Fading Word</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('img/Diego_bg.JPG') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: #ffde4d;
+        }
+
+        .fade-word {
+            animation: fadeOut 2s linear infinite;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h2>What is the prize?</h2>
+        </div>
+        <div class="fade-word">
+            <h1>ME</h1>
+        </div>
+    </div>
+</body>
+</html>
