@@ -8,7 +8,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: url('docs/assets/diego_bg.JPG') no-repeat center center fixed;
+            background: url('docs/assets/Diego_bg.JPG') no-repeat center center fixed;
             background-size: cover;
             height: 100vh;
             display: flex;
@@ -22,21 +22,34 @@
             border-radius: 10px;
             text-align: center;
             color: #ffde4d;
+
         }
 
         .fade-word {
-            animation: fadeOut 2s linear infinite;
+            position: relative;
+            overflow: hidden;
+            height: 1em;
         }
 
-        @keyframes fadeOut {
+        .fade-word::after {
+            content: "ME";
+            text-align: center;
+            animation: disappear 1.5s linear infinite;
+            height: 1em;
+        }
+
+        @keyframes disappear {
             0% {
-                opacity: 1;
+                content: "ME";
+            }
+            25% {
+                content: "M";
             }
             50% {
-                opacity: 0;
+                content: " ";
             }
             100% {
-                opacity: 0;
+                content: " ";
             }
         }
     </style>
@@ -47,8 +60,9 @@
             <h2>What is the prize?</h2>
         </div>
         <div class="fade-word">
-            <h1>ME</h1>
+
         </div>
+        <h2></h2>
     </div>
 </body>
 </html>
